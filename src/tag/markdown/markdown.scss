@@ -1,0 +1,23 @@
+@import "base/base";
+
+markdown {
+    code {
+        padding-left: 0;
+        white-space: pre;
+    }
+
+    pre {
+        margin-top: 0;
+    }
+
+    textarea {
+        min-height: 12em;
+        margin-top: -1px;
+    }
+
+    .tool {
+        border: .1rem solid #c5c5c5;
+        background: #efefef;
+        padding: .5rem 1rem;
+    }
+}

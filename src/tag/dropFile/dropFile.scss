@@ -1,0 +1,25 @@
+@import "base/base";
+
+.tag-drop-file {
+    $color-line: #efefef !default;
+    $color-font: #b3b3b3 !default;
+    $color-active: #FFFFF0 !default;
+    
+    $tag-drop-file-border-line-size: 3px;
+    $tag-drop-file-height: 180px !default;
+
+    height: $tag-drop-file-height;
+    border: $tag-drop-file-border-line-size dashed $color-line;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: $color-font;
+
+    &.active {
+        background: $color-active;
+    }
+}
