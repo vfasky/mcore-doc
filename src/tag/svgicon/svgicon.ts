@@ -5,10 +5,10 @@
 * @link http://www.allenice233.com
 */
 
-import { Template, Component } from 'mcore3'
+import * as mcore from 'mcore3'
 import * as $ from 'jquery'
 
-export default class Svgicon extends Component {
+export default class Svgicon extends mcore.Component {
     $parentNode: JQuery
 
     init() {
@@ -53,4 +53,4 @@ export default class Svgicon extends Component {
     }
 }
 
-Template.components['svgicon'] = Svgicon
+mcore.Template.components['svgicon'] = Svgicon

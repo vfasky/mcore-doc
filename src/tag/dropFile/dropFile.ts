@@ -4,8 +4,9 @@
 * @link 
 */
 
-import {Template} from 'mcore3'
-import Base from '../base'
+import * as mcore from 'mcore3'
+
+import Base from 'tag/base'
 
 export default class DropFile extends Base {
 
@@ -43,4 +44,4 @@ export default class DropFile extends Base {
     
 }
 
-Template.components['drop-file'] = DropFile
+mcore.Template.components['drop-file'] = DropFile

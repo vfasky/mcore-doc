@@ -2,7 +2,7 @@
 * 首页
 */
 
-import View from '../base'
+import View from 'view/base'
 import './index.scss'
 import * as storage from 'mcore-ext/util/storage'
 

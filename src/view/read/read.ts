@@ -5,7 +5,7 @@
 * @link 
 */
 
-import View from '../base'
+import View from 'view/base'
 import * as storage from 'mcore-ext/util/storage'
 
 export default class Read extends View {
@@ -52,6 +52,7 @@ export default class Read extends View {
     }
 
     setCurDoc (doc) {
+        doc.doc = doc.doc || { children: []}
         this.scope.ix = 0
         // console.log(doc)
         this.scope.docTitle = doc.doc.name
@@ -60,13 +61,19 @@ export default class Read extends View {
 
     parentDoc (docData) {
         this.scope.type = {}
-        Object.keys(docData).forEach((typeName, k) => {
+        Object.keys(docData).filter((typeName) => {
+            return docData[typeName].doc
+        }).forEach((typeName, k) => {
             let types = typeName.split('/')
             let type = types.shift()
             let doc = docData[typeName]
 
             if (k === 0) {
-                this.setCurDoc(doc)
+                if (doc.doc) {
+                    this.setCurDoc(doc)
+                } else {
+                    console.log(this.scope.type, typeName)
+                }
             }
 
             if (this.scope.type.hasOwnProperty(type) === false) {

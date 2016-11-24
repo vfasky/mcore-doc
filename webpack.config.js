@@ -4,10 +4,7 @@
  **/
 'use strict'
 
-// require('coffee-script/register')
-
 const path = require('path')
-// const fs = require('fs')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OpenBrowserPlugin = require('open-browser-webpack-plugin')
@@ -78,6 +75,11 @@ let config = {
             loader: 'expose?$!expose?jQuery'
         }]
     },
+    ts: {
+        logLevel: 'error',
+        silent: true,
+        transpileOnly: true
+    },
     postcss: function () {
         return [
             require('autoprefixer')({
@@ -103,10 +105,9 @@ let config = {
             'node_modules',
             './src'
         ],
-        extensions: ['', '.js', '.ts', '.es6', '.coffee', '.scss'],
+        extensions: ['', '.js', '.es6', '.ts', '.coffee', '.scss'],
         alias: {
             env: path.join(__dirname, './src/env', process.env.ENV),
-            mcore3: path.join(__dirname, './node_modules/mcore3/src/es5.ts'),
             svg: path.resolve('./svg/dist/svg')
         }
     },

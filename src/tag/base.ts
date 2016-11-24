@@ -2,8 +2,8 @@
 * tag base
 */
 
-import { Component } from 'mcore3'
+import * as mcore from 'mcore3'
 
-export default class Base extends Component {
+export default class Base extends mcore.Component {
 
 }

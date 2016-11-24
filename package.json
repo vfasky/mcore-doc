@@ -27,7 +27,8 @@
         "highlight.js": "^9.8.0",
         "marked": "^0.3.6",
         "mcore-ext": "^2.0.5",
-        "ts-loader": "^1.2.2"
+        "ts-loader": "^1.2.2",
+        "typescript": "^2.0.10"
     },
     "devDependencies": {
         "autoprefixer": "^6.4.1",

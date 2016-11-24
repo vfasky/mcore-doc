@@ -13,4 +13,33 @@
     .sidebar {
         right: 2em;
     }
+
+    dt {
+        border-top: .1rem solid #efefef;
+        padding-top: 1em;
+    }
+
+    .comment {
+        // padding-left: 1.9em;
+        margin-top: .5em;
+        display: block;
+        color: #666;
+    }
+
+    .method {
+        margin-bottom: 4rem;
+        list-style: none;
+    }
+
+    .method-title {
+        color: #4452c0;
+
+        span {
+            color: #666;
+        }
+    }
+
+    .property {
+        color: #e06870 !important;
+    }
 }

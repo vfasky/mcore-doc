@@ -3,8 +3,8 @@
 * @date 2016-11-23 17:22:58
 */
 
-import { Template } from 'mcore3'
-import Base from '../base'
+import * as mcore from 'mcore3'
+import Base from 'tag/base'
 import * as marked from 'marked'
 import * as highlight from 'highlight.js'
 import * as $ from 'jquery'
@@ -45,4 +45,4 @@ export default class Markdown extends Base {
 
 }
 
-Template.components['markdown'] = Markdown
+mcore.Template.components['markdown'] = Markdown

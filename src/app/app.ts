@@ -5,7 +5,7 @@
 * @link
 */
 
-import { App } from 'mcore3'
+import * as mcore from 'mcore3'
 import * as $ from 'jquery'
 import route from './route'
 
@@ -13,7 +13,7 @@ import 'svg'
 
 import './components'
 
-let app = new App($('#main'))
+let app = new mcore.App($('#main'))
 
 route(app, () => {
     app.run()

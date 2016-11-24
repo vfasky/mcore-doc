@@ -1,7 +1,6 @@
+import * as mcore from 'mcore3'
 
-import { Template } from 'mcore3'
-
-Template.formatters['bg'] = function (imgUrl) {
+mcore.Template.formatters['bg'] = function (imgUrl) {
     if (!imgUrl) {
         return ''
     }
